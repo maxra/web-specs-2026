@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>2026 Web, Security &amp; AI Agent Discovery Specifications — Open Reference</title>
-  <meta name="description" content="Open-source reference guide, GitHub Action, and interactive workbench links for llms.txt v2 (RFC 8288), AGENTS.md, Cursor .mdc, MCP server json, Linux Foundation A2A v1.0, and HTTP security headers." />
+  <title>2026 Web, Security &amp; AI Agent Visibility Specifications — Open Reference</title>
+  <meta name="description" content="Open-source reference guide, GitHub Action, and interactive generators verifying visibility across Muse, Claude, and AI agents for 23 global &amp; regional web platforms in 8 languages." />
   <link rel="canonical" href="https://maxra.github.io/web-specs-2026/" />
   <style>
     :root { color-scheme: dark; }
@@ -18,20 +18,22 @@
     .eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #8a8f98; margin-bottom: 10px; }
     h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 14px; }
     h2 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin: 36px 0 14px; }
-    p { color: #8a8f98; margin: 0 0 18px; max-width: 720px; }
+    p { color: #8a8f98; margin: 0 0 18px; max-width: 740px; }
     a { color: #9ba4ff; text-decoration: none; }
     a:hover { text-decoration: underline; color: #fff; }
-    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 22px 0 36px; }
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 22px 0 24px; }
     .btn {
       display: inline-flex; align-items: center; padding: 9px 15px; border-radius: 8px;
       font-size: 13.5px; font-weight: 500; border: 1px solid #23252a; background: #0f1011; color: #f7f8f8;
     }
     .btn-primary { background: #5e6ad2; border-color: #5e6ad2; color: #fff; }
+    .lang-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; font-size: 12.5px; color: #8a8f98; align-items: center; }
+    .lang-pill { padding: 3px 9px; border-radius: 6px; border: 1px solid #23252a; background: #0f1011; color: #d0d6e0; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
     .card { background: #0f1011; border: 1px solid #23252a; border-radius: 12px; padding: 20px; }
     .card h3 { font-size: 16px; font-weight: 500; margin: 0 0 6px; color: #f7f8f8; }
     .card p { font-size: 13px; margin: 0 0 12px; }
-    .links { display: flex; gap: 12px; font-size: 12.5px; }
+    .links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12.5px; }
     code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; background: #141516; border: 1px solid #23252a; padding: 1px 5px; border-radius: 4px; color: #d0d6e0; }
     footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid #23252a; font-size: 12.5px; color: #62666d; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   </style>
@@ -39,58 +41,65 @@
 <body>
   <div class="wrap">
     <div class="eyebrow">Open Specification Reference · RFC 8288 · IETF AI-Pref · AGENTS.md · MCP · LF A2A v1.0</div>
-    <h1>2026 Web, Security &amp; AI Agent Discovery Specifications</h1>
+    <h1>Check Website Visibility Across Muse, Claude &amp; AI Agents</h1>
     <p>
-      Open-source baseline files, GitHub Action CI gates, and deterministic framework compilers for modern web origins. Verify live production HTTP headers and AI crawler discoverability across 16 stacks.
+      Open-source baseline files, GitHub Action CI gates, and deterministic configuration generators for modern web origins. Verify live production HTTP headers, AI agent discoverability, and security across 23 global &amp; regional platforms.
     </p>
 
     <div class="btn-row">
-      <a class="btn btn-primary" href="https://specpulse.pages.dev/">Inspect Live Domain (20 Checks)</a>
-      <a class="btn" href="https://specpulse.pages.dev/ko/">한국어 표준 문서 &amp; 진단 허브</a>
-      <a class="btn" href="https://specpulse.pages.dev/directory/">Full 278-Route Matrix Directory</a>
+      <a class="btn btn-primary" href="https://specpulse.pages.dev/">Scan Website Free (20 Checks)</a>
+      <a class="btn" href="https://specpulse.pages.dev/directory/">Global 23-Platform Matrix</a>
+      <a class="btn" href="https://specpulse.pages.dev/pro/">Pro CLI &amp; Studio Reports</a>
       <a class="btn" href="https://github.com/maxra/web-specs-2026">GitHub Repository &amp; Action</a>
     </div>
 
-    <h2>Interactive Specification Compilers (English &amp; Korean)</h2>
+    <div class="lang-bar">
+      <span>8 Languages:</span>
+      <a class="lang-pill" href="https://specpulse.pages.dev/">EN · English</a>
+      <a class="lang-pill" href="https://specpulse.pages.dev/ja/">JA · 日本語</a>
+      <a class="lang-pill" href="https://specpulse.pages.dev/de/">DE · Deutsch</a>
+      <a class="lang-pill" href="https://specpulse.pages.dev/es/">ES · Español</a>
+      <a class="lang-pill" href="https://specpulse.pages.dev/fr/">FR · Français</a>
+      <a class="lang-pill" href="https://specpulse.pages.dev/pt/">PT · Português</a>
+      <a class="lang-pill" href="https://specpulse.pages.dev/zh/">ZH · 简体中文</a>
+      <a class="lang-pill" href="https://specpulse.pages.dev/ko/">KO · 한국어</a>
+    </div>
+
+    <h2>Interactive Specification Generators</h2>
     <div class="grid">
-      <div class="card">
-        <h3>AGENTS.md &amp; Cursor .mdc Rules</h3>
-        <p>Compile repository-root <code>AGENTS.md</code> contracts and glob-scoped <code>.cursor/rules/*.mdc</code> frontmatter files.</p>
-        <div class="links">
-          <a href="https://specpulse.pages.dev/tools/agents-md-cursor-rules/">English Workbench &rarr;</a>
-          <a href="https://specpulse.pages.dev/ko/tools/agents-md-cursor-rules/">한국어 생성기 &rarr;</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3>MCP Server Config (mcp.json)</h3>
-        <p>Generate Streamable HTTP &amp; stdio Model Context Protocol configurations and remote CORS headers.</p>
-        <div class="links">
-          <a href="https://specpulse.pages.dev/tools/mcp-server-manifest/">English Workbench &rarr;</a>
-          <a href="https://specpulse.pages.dev/ko/tools/mcp-server-manifest/">한국어 생성기 &rarr;</a>
-        </div>
-      </div>
       <div class="card">
         <h3>llms.txt v2 + RFC 8288 Link Header</h3>
         <p>Curated Markdown index paired with mandatory <code>rel="describedby"</code> HTTP discovery advertisement.</p>
         <div class="links">
-          <a href="https://specpulse.pages.dev/tools/llms-txt-v2/">English Workbench &rarr;</a>
-          <a href="https://specpulse.pages.dev/ko/tools/llms-txt-v2/">한국어 생성기 &rarr;</a>
+          <a href="https://specpulse.pages.dev/tools/llms-txt-v2/">Open Generator &rarr;</a>
         </div>
       </div>
       <div class="card">
         <h3>AI Crawler Governance (robots.txt)</h3>
         <p>Allow Muse, Claude (<code>Claude-SearchBot</code>) &amp; AI agents while blocking <code>__usage_ai-training</code> &amp; <code>GPTBot</code>.</p>
         <div class="links">
-          <a href="https://specpulse.pages.dev/tools/ai-robots-txt/">English Workbench &rarr;</a>
-          <a href="https://specpulse.pages.dev/ko/tools/ai-robots-txt/">한국어 생성기 &rarr;</a>
+          <a href="https://specpulse.pages.dev/tools/ai-robots-txt/">Open Generator &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>AGENTS.md &amp; Cursor .mdc Rules</h3>
+        <p>Compile repository-root <code>AGENTS.md</code> contracts and glob-scoped <code>.cursor/rules/*.mdc</code> frontmatter files.</p>
+        <div class="links">
+          <a href="https://specpulse.pages.dev/tools/agents-md-cursor-rules/">Open Generator &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>MCP Server Config (mcp.json)</h3>
+        <p>Generate Streamable HTTP &amp; stdio Model Context Protocol configurations and remote CORS headers.</p>
+        <div class="links">
+          <a href="https://specpulse.pages.dev/tools/mcp-server-manifest/">Open Generator &rarr;</a>
         </div>
       </div>
       <div class="card">
         <h3>Linux Foundation A2A v1.0 Card</h3>
         <p>Compile strict v1.0 <code>/.well-known/agent-card.json</code> manifests with <code>supportedInterfaces[]</code>.</p>
         <div class="links">
-          <a href="https://specpulse.pages.dev/tools/a2a-agent-card/">English Workbench &rarr;</a>
-          <a href="https://specpulse.pages.dev/ko/tools/a2a-agent-card/">한국어 생성기 &rarr;</a>
+          <a href="https://specpulse.pages.dev/tools/a2a-agent-card/">Open Generator &rarr;</a>
         </div>
       </div>
       <div class="card">
@@ -104,22 +113,43 @@
       </div>
     </div>
 
+    <h2>Supported Global &amp; Regional E-Commerce / Web Platforms (23)</h2>
+    <div class="card" style="margin-bottom: 18px;">
+      <p style="max-width:none; margin-bottom:10px;">
+        Direct configuration templates for cloud frameworks and leading national commerce platforms worldwide:
+      </p>
+      <div class="links">
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/nextjs/">Next.js</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/cloudflare-pages/">Cloudflare</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/vercel/">Vercel</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/shopify/">Shopify</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/wix/">Wix Studio</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/wordpress/">WordPress</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/shopware/">Shopware 6 (DE)</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/prestashop/">PrestaShop 8 (EU)</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/tiendanube/">Tiendanube / Nuvemshop (LATAM)</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/eccube/">EC-CUBE 4 (JP)</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/studio-jp/">STUDIO (JP)</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/shopline/">Shopline (APAC)</a>
+        <a href="https://specpulse.pages.dev/tools/llms-txt-v2/cafe24/">Cafe24 (KR)</a>
+      </div>
+    </div>
+
     <h2>Local CLI, Tailored AI Remediation Prompts &amp; Studio Reports</h2>
     <div class="card">
-      <h3>SpecPulse Kit &amp; Studio License</h3>
+      <h3>SpecPulse Pro Kit &amp; Studio License</h3>
       <p>
         Run 20-check live domain telemetry from your terminal, generate domain-specific remediation prompts (<code>--prompt</code>), drop verified <code>SKILL.md</code> rules into Cursor/Claude Code/Antigravity, and export white-label HTML/PDF client audit reports.
       </p>
       <div class="links">
-        <a href="https://specpulse.pages.dev/pro/">SpecPulse Kit &amp; Studio (EN) &rarr;</a>
-        <a href="https://specpulse.pages.dev/ko/pro/">한국어 패키지 안내 &rarr;</a>
+        <a href="https://specpulse.pages.dev/pro/">SpecPulse Pro Kit &amp; Studio &rarr;</a>
         <a href="https://specpulse.pages.dev/sample-audit-report.html">Sample Executive HTML Audit Report &rarr;</a>
       </div>
     </div>
 
     <footer>
       <span>MIT Open Reference · Maintained by SpecPulse (Maxra Labs)</span>
-      <span><a href="https://specpulse.pages.dev/directory/">All 16 Platform Guides (Next.js, Shopify, Cafe24, Cloudflare, Laravel, FastAPI...)</a></span>
+      <span><a href="https://specpulse.pages.dev/directory/">All 23 Platform Guides &amp; 8 Language Hubs</a></span>
     </footer>
   </div>
 </body>

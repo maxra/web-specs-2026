@@ -72,3 +72,20 @@ Add a live edge-verified compliance badge to your repository `README.md`:
 - [`examples/agent-card.json`](./examples/agent-card.json) — Strict Linux Foundation A2A v1.0 manifest
 
 For offline/local CLI auditing, domain-tailored coding-agent remediation prompts (`--prompt`), verified `SKILL.md` / `.cursor/rules` packs, and white-label HTML/PDF executive client reports (`--brand`), see **[SpecPulse Kit & Studio](https://specpulse.pages.dev/pro/)**.
+
+---
+
+## 5. Open Reference (Free) vs. SpecPulse Pro Kit & Studio
+
+| Capability | Free Open Reference (`$0`) | Pro Kit (`$12` Launch) | Studio & Agency (`$34` Launch) |
+| :--- | :---: | :---: | :---: |
+| Web 20-Check Domain Scanner & 16-Stack Single-File Generators | ✅ | ✅ | ✅ |
+| Public GitHub Action (`maxra/web-specs-2026@main`) | ✅ | ✅ | ✅ |
+| Zero-Dependency Local CLI (`specpulse audit`, Staging & Prod) | — | ✅ | ✅ |
+| Tailored AI Fix Prompt (`--prompt` for Cursor / Claude / ChatGPT) | — | ✅ | ✅ |
+| 1-Command 7-File Config & Rule Bundle (`--fix-dir`) | — | ✅ | ✅ |
+| Verified `SKILL.md` + `.cursor/rules/*.mdc` Pack | — | 1 Seat | Unlimited Team Seats |
+| Multi-Domain Batch Portfolio & Lead Scanner (`specpulse batch` + CSV) | — | Own Domains | Unlimited Client/Prospects |
+| White-Label Client HTML/PDF Audit Reports (`--brand`) | — | — | **Full Commercial Rights** |
+
+- **Compare & Instant Download**: [https://specpulse.pages.dev/pro/](https://specpulse.pages.dev/pro/) · [한국어 안내](https://specpulse.pages.dev/ko/pro/) · [Live Sample HTML Report](https://specpulse.pages.dev/sample-audit-report.html)

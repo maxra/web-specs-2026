@@ -1,0 +1,13 @@
+# Acme Systems
+
+> Developer infrastructure, edge telemetry, and API documentation.
+
+## Core Documentation
+
+- [Architecture Overview](https://acme.dev/docs): Core runtime design and quickstart guides.
+- [API Reference](https://acme.dev/docs/api): REST and MCP endpoint specifications.
+- [Pricing & Quotas](https://acme.dev/pricing): Usage tiers and enterprise SLAs.
+
+## Governance
+
+- [Security Policy](https://acme.dev/.well-known/security.txt): RFC 9116 vulnerability disclosure.

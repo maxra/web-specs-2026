@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "acme-remote": {
+      "type": "http",
+      "url": "https://acme.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MCP_API_TOKEN}"
+      }
+    }
+  }
+}

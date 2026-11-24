@@ -1,0 +1,31 @@
+{
+  "name": "Acme Systems Agent",
+  "description": "Public A2A v1.0 discovery manifest.",
+  "version": "1.0.0",
+  "provider": {
+    "organization": "Acme Systems",
+    "url": "https://acme.dev"
+  },
+  "supportedInterfaces": [
+    {
+      "url": "https://acme.dev/a2a/v1",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extendedAgentCard": false
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["application/json"],
+  "skills": [
+    {
+      "id": "docs-search",
+      "name": "Documentation Lookup",
+      "description": "Query canonical product documentation.",
+      "tags": ["docs", "search"]
+    }
+  ]
+}

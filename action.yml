@@ -1,0 +1,71 @@
+name: 'SpecPulse 2026 Web & AI Specification Telemetry'
+description: 'Audit any live domain across 20 HTTP security, technical SEO, llms.txt v2, and AI crawler governance checks.'
+author: 'SpecPulse by Maxra Labs'
+branding:
+  icon: 'check-circle'
+  color: 'purple'
+
+inputs:
+  url:
+    description: 'Public production domain or HTTPS URL to inspect (e.g. https://example.com)'
+    required: true
+  fail-under:
+    description: 'Minimum passing compliance score (0-100). Set to 0 for report-only mode.'
+    required: false
+    default: '80'
+
+outputs:
+  score:
+    description: 'Measured compliance score out of 100'
+    value: ${{ steps.audit.outputs.score }}
+  grade:
+    description: 'Compliance letter grade (A+, A, B, C, D)'
+    value: ${{ steps.audit.outputs.grade }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run Live Edge Telemetry Check
+      id: audit
+      shell: bash
+      env:
+        TARGET_URL: ${{ inputs.url }}
+        FAIL_UNDER: ${{ inputs.fail-under }}
+      run: |
+        node -e '
+          const target = process.env.TARGET_URL;
+          const threshold = Number(process.env.FAIL_UNDER || "0");
+          const apiUrl = "https://specpulse.pages.dev/api/audit?url=" + encodeURIComponent(target);
+          const res = await fetch(apiUrl, { headers: { "User-Agent": "SpecPulse-GitHub-Action/2.1" } });
+          const data = await res.json();
+          if (!res.ok || typeof data.totalScore !== "number") {
+            console.error("SpecPulse audit failed:", data.error || res.status);
+            process.exit(1);
+          }
+          const fs = await import("node:fs");
+          const host = String(data.origin || target).replace(/^https?:\/\//, "").replace(/\/$/, "");
+          const reportUrl = "https://specpulse.pages.dev/?domain=" + encodeURIComponent(host);
+          console.log(`=== SpecPulse 2026 Telemetry: ${data.origin} ===`);
+          console.log(`Score: ${data.totalScore}/100 (Grade ${data.grade}) | Passed: ${data.passedCount} | Action Required: ${data.failedCount}`);
+          for (const c of data.checks || []) {
+            if (!c.passed) console.log(`  [MISSING ${c.score}/${c.weight}] ${c.title} (${c.spec}) -> ${c.fixHint}`);
+          }
+          console.log(`Full Interactive Report: ${reportUrl}`);
+          if (process.env.GITHUB_OUTPUT) {
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, `score=${data.totalScore}\ngrade=${data.grade}\n`);
+          }
+          if (process.env.GITHUB_STEP_SUMMARY) {
+            const failedRows = (data.checks || []).filter(c => !c.passed).map(c => `| ❌ \`${c.spec}\` | **${c.title}** | ${c.fixHint} |`).join("\n");
+            const md = [
+              `### SpecPulse 2026 Telemetry — \`${data.origin}\` (**${data.totalScore}/100 · Grade ${data.grade}**)`,
+              `- **Interactive Report**: [${reportUrl}](${reportUrl})`,
+              `- **Local CLI, Tailored AI Prompt (\`--prompt\`) & Agent Skill Pack**: [SpecPulse Kit](https://specpulse.pages.dev/pro/?domain=${encodeURIComponent(host)})`,
+              failedRows ? `\n| Spec | Failing Check | Recommended Remediation |\n| :--- | :--- | :--- |\n${failedRows}` : "\n✅ All 20 specification checks passed."
+            ].join("\n");
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md + "\n");
+          }
+          if (data.totalScore < threshold) {
+            console.error(`Score ${data.totalScore} is below fail-under threshold ${threshold}.`);
+            process.exit(1);
+          }
+        '

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 Web, Security &amp; AI Agent Discovery Specifications — Open Reference</title>
+  <meta name="description" content="Open-source reference guide, GitHub Action, and interactive workbench links for llms.txt v2 (RFC 8288), AGENTS.md, Cursor .mdc, MCP server json, Linux Foundation A2A v1.0, and HTTP security headers." />
+  <link rel="canonical" href="https://maxra.github.io/web-specs-2026/" />
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 48px 24px 80px; background: #010102; color: #f7f8f8;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      line-height: 1.55; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; }
+    .eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #8a8f98; margin-bottom: 10px; }
+    h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 14px; }
+    h2 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin: 36px 0 14px; }
+    p { color: #8a8f98; margin: 0 0 18px; max-width: 720px; }
+    a { color: #9ba4ff; text-decoration: none; }
+    a:hover { text-decoration: underline; color: #fff; }
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 22px 0 36px; }
+    .btn {
+      display: inline-flex; align-items: center; padding: 9px 15px; border-radius: 8px;
+      font-size: 13.5px; font-weight: 500; border: 1px solid #23252a; background: #0f1011; color: #f7f8f8;
+    }
+    .btn-primary { background: #5e6ad2; border-color: #5e6ad2; color: #fff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
+    .card { background: #0f1011; border: 1px solid #23252a; border-radius: 12px; padding: 20px; }
+    .card h3 { font-size: 16px; font-weight: 500; margin: 0 0 6px; color: #f7f8f8; }
+    .card p { font-size: 13px; margin: 0 0 12px; }
+    .links { display: flex; gap: 12px; font-size: 12.5px; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; background: #141516; border: 1px solid #23252a; padding: 1px 5px; border-radius: 4px; color: #d0d6e0; }
+    footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid #23252a; font-size: 12.5px; color: #62666d; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">Open Specification Reference · RFC 8288 · IETF AI-Pref · AGENTS.md · MCP · LF A2A v1.0</div>
+    <h1>2026 Web, Security &amp; AI Agent Discovery Specifications</h1>
+    <p>
+      Open-source baseline files, GitHub Action CI gates, and deterministic framework compilers for modern web origins. Verify live production HTTP headers and AI crawler discoverability across 16 stacks.
+    </p>
+
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://specpulse.pages.dev/">Inspect Live Domain (20 Checks)</a>
+      <a class="btn" href="https://specpulse.pages.dev/ko/">한국어 표준 문서 &amp; 진단 허브</a>
+      <a class="btn" href="https://specpulse.pages.dev/directory/">Full 278-Route Matrix Directory</a>
+      <a class="btn" href="https://github.com/maxra/web-specs-2026">GitHub Repository &amp; Action</a>
+    </div>
+
+    <h2>Interactive Specification Compilers (English &amp; Korean)</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>AGENTS.md &amp; Cursor .mdc Rules</h3>
+        <p>Compile repository-root <code>AGENTS.md</code> contracts and glob-scoped <code>.cursor/rules/*.mdc</code> frontmatter files.</p>
+        <div class="links">
+          <a href="https://specpulse.pages.dev/tools/agents-md-cursor-rules/">English Workbench &rarr;</a>
+          <a href="https://specpulse.pages.dev/ko/tools/agents-md-cursor-rules/">한국어 생성기 &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>MCP Server Config (mcp.json)</h3>
+        <p>Generate Streamable HTTP &amp; stdio Model Context Protocol configurations and remote CORS headers.</p>
+        <div class="links">
+          <a href="https://specpulse.pages.dev/tools/mcp-server-manifest/">English Workbench &rarr;</a>
+          <a href="https://specpulse.pages.dev/ko/tools/mcp-server-manifest/">한국어 생성기 &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>llms.txt v2 + RFC 8288 Link Header</h3>
+        <p>Curated Markdown index paired with mandatory <code>rel="describedby"</code> HTTP discovery advertisement.</p>
+        <div class="links">
+          <a href="https://specpulse.pages.dev/tools/llms-txt-v2/">English Workbench &rarr;</a>
+          <a href="https://specpulse.pages.dev/ko/tools/llms-txt-v2/">한국어 생성기 &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>AI Crawler Governance (robots.txt)</h3>
+        <p>Allow <code>OAI-SearchBot</code> &amp; <code>PerplexityBot</code> citations while blocking <code>__usage_ai-training</code> &amp; <code>GPTBot</code>.</p>
+        <div class="links">
+          <a href="https://specpulse.pages.dev/tools/ai-robots-txt/">English Workbench &rarr;</a>
+          <a href="https://specpulse.pages.dev/ko/tools/ai-robots-txt/">한국어 생성기 &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Linux Foundation A2A v1.0 Card</h3>
+        <p>Compile strict v1.0 <code>/.well-known/agent-card.json</code> manifests with <code>supportedInterfaces[]</code>.</p>
+        <div class="links">
+          <a href="https://specpulse.pages.dev/tools/a2a-agent-card/">English Workbench &rarr;</a>
+          <a href="https://specpulse.pages.dev/ko/tools/a2a-agent-card/">한국어 생성기 &rarr;</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Schema.org JSON-LD &amp; Security Headers</h3>
+        <p>Deterministic <code>SoftwareApplication</code> / <code>Product</code> JSON-LD, HSTS Preload, CSP3, and RFC 9116 <code>security.txt</code>.</p>
+        <div class="links">
+          <a href="https://specpulse.pages.dev/tools/json-ld-schema/">JSON-LD &rarr;</a>
+          <a href="https://specpulse.pages.dev/tools/security-headers/">CSP &amp; HSTS &rarr;</a>
+          <a href="https://specpulse.pages.dev/tools/security-txt/">security.txt &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>Local CLI, Tailored AI Remediation Prompts &amp; Studio Reports</h2>
+    <div class="card">
+      <h3>SpecPulse Kit &amp; Studio License</h3>
+      <p>
+        Run 20-check live domain telemetry from your terminal, generate domain-specific remediation prompts (<code>--prompt</code>), drop verified <code>SKILL.md</code> rules into Cursor/Claude Code/Antigravity, and export white-label HTML/PDF client audit reports.
+      </p>
+      <div class="links">
+        <a href="https://specpulse.pages.dev/pro/">SpecPulse Kit &amp; Studio (EN) &rarr;</a>
+        <a href="https://specpulse.pages.dev/ko/pro/">한국어 패키지 안내 &rarr;</a>
+        <a href="https://specpulse.pages.dev/sample-audit-report.html">Sample Executive HTML Audit Report &rarr;</a>
+      </div>
+    </div>
+
+    <footer>
+      <span>MIT Open Reference · Maintained by SpecPulse (Maxra Labs)</span>
+      <span><a href="https://specpulse.pages.dev/directory/">All 16 Platform Guides (Next.js, Shopify, Cafe24, Cloudflare, Laravel, FastAPI...)</a></span>
+    </footer>
+  </div>
+</body>
+</html>

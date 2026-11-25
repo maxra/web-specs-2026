@@ -1,7 +1,4 @@
-# 2026 Split AI Crawler Governance (RFC 9309 + IETF AI-Pref)
-User-agent: __usage_ai-training
-Disallow: /
-
+# SpecPulse v2.4 — Split AI Crawler & Content-Signal Policy
 User-agent: GPTBot
 Disallow: /
 
@@ -11,8 +8,17 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
+User-agent: Applebot-Extended
+Disallow: /
+
 User-agent: CCBot
 Disallow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
 
 User-agent: OAI-SearchBot
 Allow: /
@@ -20,13 +26,8 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: Claude-SearchBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
 User-agent: *
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 Allow: /
 
 Sitemap: https://acme.dev/sitemap.xml

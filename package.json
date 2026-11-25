@@ -1,0 +1,10 @@
+{
+  "name": "web-specs-2026",
+  "version": "2.4.0",
+  "description": "Open reference templates, schema tests, and GitHub Action for AI bot policies (Content-Signal & robots.txt), MCP discovery, A2A v1.0, and HTTP security headers.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "MIT"
+}

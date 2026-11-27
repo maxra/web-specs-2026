@@ -13,9 +13,11 @@ Open-source baseline configurations, automated schema validation tests (`npm tes
 
 ---
 
-## 1. Public Streamable HTTP MCP Endpoint (Free, Zero API Key)
+## 1. MCP Server Setup (Streamable HTTP & Local `stdio`)
 
-Connect Claude Desktop, Cursor, Antigravity, or Windsurf directly to query live domain audits (`specpulse_audit_url`), platform-specific snippets (`specpulse_get_platform_snippet`), and scoring rules (`specpulse_get_methodology`):
+SpecPulse exposes 3 zero-auth tools (`specpulse_audit_url`, `specpulse_get_platform_snippet`, `specpulse_get_methodology`) via both a hosted Streamable HTTP endpoint and an open-source local `stdio` runner ([`bin/specpulse-mcp.mjs`](./bin/specpulse-mcp.mjs)).
+
+**Option A — Remote Streamable HTTP (Zero Install):**
 
 ```json
 {
@@ -23,6 +25,19 @@ Connect Claude Desktop, Cursor, Antigravity, or Windsurf directly to query live 
     "specpulse": {
       "type": "http",
       "url": "https://specpulse.pages.dev/api/mcp"
+    }
+  }
+}
+```
+
+**Option B — Local `stdio` Process (Node.js 20+):**
+
+```json
+{
+  "mcpServers": {
+    "specpulse": {
+      "command": "npx",
+      "args": ["-y", "github:maxra/web-specs-2026"]
     }
   }
 }

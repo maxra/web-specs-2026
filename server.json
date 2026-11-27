@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.maxra/specpulse",
+  "title": "SpecPulse Web, AI Bot Policy & Security Auditor",
+  "description": "Audit website AI crawler policies, Content-Signal, SSR readability, SEO, and HTTP security headers.",
+  "version": "2.4.0",
+  "websiteUrl": "https://specpulse.pages.dev",
+  "repository": {
+    "url": "https://github.com/maxra/web-specs-2026",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://specpulse.pages.dev/api/mcp"
+    }
+  ]
+}

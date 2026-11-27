@@ -1,9 +1,13 @@
 {
   "name": "web-specs-2026",
   "version": "2.4.0",
-  "description": "Open reference templates, schema tests, and GitHub Action for AI bot policies (Content-Signal & robots.txt), MCP discovery, A2A v1.0, and HTTP security headers.",
+  "description": "SpecPulse MCP server (Streamable HTTP & stdio), GitHub Action, and 23-platform config templates for AI bot policies (Content-Signal & robots.txt), SSR readability, SEO, and HTTP security headers.",
   "type": "module",
+  "bin": {
+    "specpulse-mcp": "./bin/specpulse-mcp.mjs"
+  },
   "scripts": {
+    "start": "node ./bin/specpulse-mcp.mjs",
     "test": "node --test test/*.test.mjs"
   },
   "license": "MIT"

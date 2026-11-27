@@ -1,6 +1,7 @@
 # Web, AI Bot Governance & HTTP Security Reference (`v2.4.0`)
 
 [![Validate Specification Templates](https://github.com/maxra/web-specs-2026/actions/workflows/ci.yml/badge.svg)](https://github.com/maxra/web-specs-2026/actions/workflows/ci.yml)
+[![SpecPulse MCP Server](https://glama.ai/mcp/servers/maxra/web-specs-2026/badges/score.svg)](https://glama.ai/mcp/servers/maxra/web-specs-2026)
 [![SpecPulse v2.4 Compliance](https://specpulse.pages.dev/api/badge?url=specpulse.pages.dev)](https://specpulse.pages.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-5e6ad2.svg)](./LICENSE)
 
